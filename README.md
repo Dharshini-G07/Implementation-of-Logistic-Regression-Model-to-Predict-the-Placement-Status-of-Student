@@ -8,33 +8,26 @@ To write a program to implement the the Logistic Regression Model to Predict the
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## AlgorithmLoad the Dataset
-1.Load the Dataset
 
-2.Create a Copy of the Original Data
+1.Load Dataset: Load the Placement_Data.csv dataset using pandas.read_csv() to create a DataFrame.
 
-3.Drop Irrelevant Columns (sl_no, salary)
+2.Remove Unnecessary Columns: Drop irrelevant columns (such as sl_no and salary) from the dataset.
 
-4.Check for Missing Values
+3.Check for Missing Values and Duplicates: Check for any missing values (isnull().sum()) and duplicate rows (duplicated().sum()) in the data.
 
-5.Check for Duplicate Rows
+4.Label Encoding: Use LabelEncoder to convert categorical columns (like gender, ssc_b, hsc_b, hsc_s, degree_t, workex, specialisation, status) into numerical values.
 
-6.Encode Categorical Features using Label Encoding
+5.Feature Selection: Separate the dataset into features (X) and the target variable (y), where y is the status (placement status) and X includes the other columns.
 
-7.Split Data into Features (X) and Target (y)
+6.Split the Data: Split the dataset into training and testing sets using train_test_split(), with 80% of the data for training and 20% for testing.
 
-8.Split Data into Training and Testing Sets
+7.Train the Model: Create and train a logistic regression model using LogisticRegression() and the training data (X_train, y_train).
 
-9.Initialize and Train Logistic Regression Model
+8.Predict on Test Data: Use the trained model to predict the placement status (y_pred) for the test data (X_test).
 
-10.Make Predictions on Test Set
+9.Evaluate the Model: Calculate the accuracy using accuracy_score(), generate the confusion matrix using confusion_matrix(), and create a classification report using classification_report().
 
-11.Evaluate Model using Accuracy Score
-
-12.Generate and Display Confusion Matrix
-
-13.Generate and Display Classification Report
-
-14.Make Prediction on a New Sample Input
+10.Make Predictions on New Data: Use the trained model to predict the placement status of new student data (e.g., lr.predict([[...]])).
 
 ## Program:
 ```
